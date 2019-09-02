@@ -1,7 +1,7 @@
 import React from 'react'
 
 class Places extends React.Component {
-	state = [{title: 'Igloo',
+	 			places = [{title: 'Igloo',
 						price: 1000,
 						location:'Antarctica'
 					},{title: 'Tent',
@@ -22,7 +22,7 @@ class Places extends React.Component {
 					}]
 
 	render () {
-		return
+		return <h1>{this.places.length}</h1>
 	}
 }
 
