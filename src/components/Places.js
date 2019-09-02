@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/Places.css'
 import Favourites from './Favourites'
+import Thumbnail from './Thumbnail'
 
 
 class Places extends React.Component {
@@ -33,14 +34,8 @@ class Places extends React.Component {
 				<h1>{this.state.places.length}</h1>
 				<div className="thumbnails" >
 					{
-						this.state.places.map((element, index)=> {
-							return(
-							<div>
-								<h1>{element.title}</h1>
-								<h3> {element.price}</h3>
-								<p>{element.location}</p>
-							</div>
-							)}
+						this.state.places.map((element, index)=>
+						<Thumbnail key={index} place={element}/>
 						)
 					}
 				</div>
