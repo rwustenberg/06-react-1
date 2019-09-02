@@ -1,5 +1,7 @@
 import React from 'react'
 import '../styles/Places.css'
+import Favourites from './Favourites'
+
 
 class Places extends React.Component {
 	state = {
@@ -19,7 +21,7 @@ class Places extends React.Component {
 							},{title: 'Cave',
 								price: 50,
 								location:'Australia'
-							},{title: 'Mansion',
+							},{title: 'Acropolis',
 								price: 600,
 								location:'Greece'
 							}
@@ -42,6 +44,7 @@ class Places extends React.Component {
 						)
 					}
 				</div>
+				<Favourites />
 			</div>
 		)
 	}

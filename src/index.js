@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Places from './components/Places';
+import Favourites from './components/Favourites';
+
 import './styles/Places.css'
 
 ReactDOM.render(<Places />, document.getElementById('root'));
