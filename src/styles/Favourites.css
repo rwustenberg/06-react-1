@@ -3,7 +3,7 @@
 	background-color: grey;
 	display: inline-grid;
 	width: 100vw;
-	height: 50px;
+	height: 100px;
 	grid-row-gap: 20px;
 	grid-column-gap: 20px;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
