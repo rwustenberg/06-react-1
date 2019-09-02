@@ -1,28 +1,48 @@
 import React from 'react'
 
 class Places extends React.Component {
-	 			places = [{title: 'Igloo',
-						price: 1000,
-						location:'Antarctica'
-					},{title: 'Tent',
-						price: 20,
-						location:'Thailand'
-					},{title: 'Ski Lodge',
-						price: 350,
-						location:'Iceland'
-					},{title: 'House',
-						price: 200,
-						location:'New Zealand'
-					},{title: 'Cave',
-						price: 50,
-						location:'Australia'
-					},{title: 'Mansion',
-						price: 600,
-						location:'Greece'
-					}]
-
+	state = {
+		places:  [
+							{title: 'Igloo',
+								price: 1000,
+								location:'Antarctica'
+							},{title: 'Tent',
+								price: 20,
+								location:'Thailand'
+							},{title: 'Ski Lodge',
+								price: 350,
+								location:'Iceland'
+							},{title: 'House',
+								price: 200,
+								location:'New Zealand'
+							},{title: 'Cave',
+								price: 50,
+								location:'Australia'
+							},{title: 'Mansion',
+								price: 600,
+								location:'Greece'
+							}
+						]
+}
 	render () {
-		return <h1>{this.places.length}</h1>
+		return (
+			<div>
+				<h1>{this.state.places.length}</h1>
+				<div className="thumbnails" >
+					{
+						this.state.places.map((element, index)=> {
+							return(
+							<div>
+								<h1>{element.title}</h1>
+								<h3> {element.price}</h3>
+								<p>{element.location}</p>
+							</div>
+							)}
+						)
+					}
+				</div>
+			</div>
+		)
 	}
 }
 
